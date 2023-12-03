@@ -58,8 +58,8 @@ fun printPortyTable(portyTable: Array<IntArray>) {
 fun encryptMessage(message: String, helpSymbol: String, portyTable: Array<IntArray>): String {
     val paddedMessage = if (message.length % 2 != 0) message + helpSymbol else message
     val encryptedPairs = paddedMessage.chunked(2).map { pair ->
-        val row = (pair[0].code - 'А'.code + portyTable.size) % portyTable.size
-        val col = (pair[1].code - 'А'.code + portyTable.size) % portyTable.size
+        val row = (pair[0].code - 'А'.code) % portyTable.size
+        val col = (pair[1].code - 'А'.code) % portyTable.size
         val encryptedValue = portyTable[row][col]
         encryptedValue.toString().padStart(3, '0')
     }
