@@ -32,7 +32,6 @@ fun main() {
     val c = Point(1.0, 5.0)
 
     val triangle = Triangle(a, b, c)
-
     val r = triangle.circleRadius()
     val center = triangle.circleCenter()
 
