@@ -26,7 +26,7 @@ fun main() {
         println("Быки: ${bullsAndCows.first}, Коровы: ${bullsAndCows.second}")
 
         if (bullsAndCows.first == 4) {
-            println("Победа! Вы угадали число за $attempts попыток.")
+            println("Победа! Вы угадали число ${secretNumber.joinToString("")} за $attempts попыток.")
             break
         }
     }
